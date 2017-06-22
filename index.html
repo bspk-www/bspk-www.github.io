@@ -1,1 +1,116 @@
-bspk placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style1920-960.css" type="text/css" rel="stylesheet">
+    <link href="css/style960-680.css" type="text/css" rel="stylesheet">
+    <link href="css/style680-480.css" type="text/css" rel="stylesheet">
+    <link href="css/style480-320.css" type="text/css" rel="stylesheet">
+    <link href="fonts/fonts.css" type="text/css" rel="stylesheet">
+    <title>BSPK</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div class="global-wrapper">
+    <div class="banner">
+        <div>
+            <a href="index.html#">BSPK</a>
+            <p>Empowering Luxury Sales</p>
+        </div>
+    </div>
+    <div class="beige-block white">
+        Bespoke is a premier digital channel for<br>
+        luxury associates to increase sales by<br>
+        creating memorable client experiences<br>
+    </div>
+    <div class="three-in-line-blocks" id="three-1">
+        <div class="qq ww" style="background: url(images/1.jpg) no-repeat center;"></div>
+        <div class="qq" id="text-1">
+            <h2>For Luxury Professionals</h2>
+            <p>Engage and excite your clients</p>
+            <p>Build lasting client relationships</p>
+        </div>
+        <div class="qq ww" style="background: url(images/2.jpg) no-repeat center;"></div>
+        <div class="qq" id="text-2">
+            <h2>For Luxury Professionals</h2>
+            <p>Offer a better shopping experience</p>
+            <p>Close more sales</p>
+        </div>
+        <div class="qq ww" style="background: url(images/3.jpg) no-repeat center;"></div>
+        <div class="qq ww" style="background: url(images/4.jpg) no-repeat center;"></div>
+    </div>
+    <div class="beige-block">
+        Luxury associates achieve better<br>
+        sales performance, form closer client<br>
+        relationships and save time.
+    </div>
+    <div class="three-in-line-blocks" id="three-2">
+        <div class="qq" id="text-3">
+            <h2>For the Business</h2>
+            <p>Increase sales efficiency</p>
+            <p>Grow your clientele</p>
+            <p>Make the sales job easier to drive performance</p>
+        </div>
+        <div class="qq ww" style="background: url(images/5.png) no-repeat center;"></div>
+        <div class="qq" id="text-4">
+            <h2>For the Business</h2>
+            <p>Surprise and delight your customers</p>
+            <p>Personalize sales engagement</p>
+        </div>
+        <div class="qq ww" style="background: url(images/6.jpg) no-repeat center;"></div>
+        <div class="qq ww" style="background: url(images/7.jpg) no-repeat center;"></div>
+        <div class="qq ww" style="background: url(images/8.png) no-repeat center;"></div>
+    </div>
+    <div class="black-block">
+        <div>Interested?</div>
+        <a href="mailto:inquiry@bspk.com">Get in Touch</a>
+    </div>
+    <div class="contact-block">
+        <h2>Contact</h2>
+        <p>+1 415-244-7777<br>
+        inquiry@bspk.com<br>@bspk 2017</p>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(window).on('resize',resizeForBlock);
+        
+        function resizeForBlock(){
+            var width=$(window).width();
+            if( width>681 && !$('body').hasClass('desktop') ){
+                desktop()
+            }else if( width<680 && width>481 && !$('body').hasClass('tablet') ){
+                tablet();
+            }else if( width<480 && !$('body').hasClass('mobile') ){
+                mobile();
+            }
+        }
+        function desktop(){
+            $('body').removeClass('mobile tablet').addClass('desktop');
+            $('#three-1 .ww:eq(0)').after($('#text-1'));
+            $('#three-1 .ww:eq(1)').after($('#text-2'));
+            $('#three-2 .ww:eq(0)').before($('#text-3'));
+            $('#three-2 .ww:eq(0)').after($('#text-4'));
+        }
+        function tablet(){
+            $('body').removeClass('mobile desktop').addClass('tablet');
+            $('#three-1 .ww:eq(0)').after($('#text-1'));
+            $('#three-1 .ww:eq(2)').after($('#text-2'));
+            $('#three-2 .ww:eq(0)').before($('#text-3'));
+            $('#three-2 .ww:eq(1)').after($('#text-4'));
+        }
+        function mobile(){
+            $('body').removeClass('tablet desktop').addClass('mobile');
+            $('#three-1 .ww:eq(0)').after($('#text-1'));
+            $('#three-1 .ww:eq(2)').after($('#text-2'));
+            $('#three-2 .ww:eq(0)').after($('#text-3'));
+            $('#three-2 .ww:eq(2)').after($('#text-4'));
+        }
+        resizeForBlock();
+    });
+</script>
+</body>
+</html>

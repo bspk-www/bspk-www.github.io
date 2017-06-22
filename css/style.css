@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+    min-height: 100%;
+}
+.global-wrapper{
+    display: block;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.banner{
+    background: url('../images/banner.jpg') no-repeat center;
+    background-size: cover;
+    height: 940px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner a{
+    color:white;
+    padding: 17px 28px 19px;
+    font-size: 92px;
+    text-decoration: none;
+    border: 9px solid white;
+    font-family: "Gotham-Medium";
+}
+.banner p{
+    margin: 57px 0 0;
+    color:white;
+    font-size: 52px;
+    font-family: "Gotham-Medium";
+}
+.beige-block{
+    width: 100%;
+    height: 652px;
+    background: #fdf1e3;
+    color:#27384b;
+    padding: 0px 96px;
+    display: flex;
+    align-items: center;
+    font-size: 77px;
+    font-family: "Gotham-XLight";
+    line-height: 1.2;
+}
+.contact-block {
+    width: 100%;
+    height: 370px;
+    background: #fdf1e3;
+    color:#27384b;
+    padding: 130px 115px;
+    line-height: 1.3;
+}
+.contact-block h2{
+    font-family: "Gotham-Bold";
+    font-size: 27px;
+    color: #27384b;
+    display: block;
+    margin:0;
+}
+.contact-block p{
+    font-family: "Gotham-Light";
+    font-size: 27px;
+    color: #27384b;
+    display: block;
+    margin:0;
+}
+.three-in-line-blocks{
+    font-size: 0;
+}
+.three-in-line-blocks .qq{
+    overflow: hidden;
+    width: 33.3333%;
+    height: 652px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid white;
+    background-size: cover!important;
+    padding: 115px 76px;
+}
+/*.three-in-line-blocks .qq:nth-child(2),.three-in-line-blocks .qq:nth-child(5){
+    border-left:3px solid white;
+    border-right:3px solid white;
+}*/
+.three-in-line-blocks .qq h2{
+    color:#27384b;
+    font-size: 38px;
+    font-family: "Gotham-Bold";
+    font-weight: 400;
+}
+.three-in-line-blocks .qq p{
+    color:#27384b;
+    font-size: 38px;
+    font-family: "Gotham-Light";
+    margin: 38px 0;
+    line-height: 1.2;
+}
+.black-block{
+    width: 100%;
+    height: 652px;
+    background: #3E3E3E;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+.black-block>div{
+    font-size: 86px;
+    margin-bottom:46px;
+    font-family: "Gotham-XLight";
+    color: white;    
+}
+.black-block a{
+    background: #2C2C2C;
+    color:#fff;
+    font-size: 38px;
+    text-decoration: none;
+    font-family: "Gotham-Light";
+    padding: 19px 38px;
+    border-radius: 19px;
+    transition: all 1s;
+}
+.black-block a:hover{
+    background: red;
+}
