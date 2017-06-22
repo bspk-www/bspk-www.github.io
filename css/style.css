@@ -129,5 +129,5 @@ img{
     transition: all 1s;
 }
 .black-block a:hover{
-    background: red;
+    background: #1E1E1E;
 }
