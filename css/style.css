@@ -73,8 +73,6 @@ img{
     display: block;
     margin:0;
 }
-.contact-block p a { text-decoration: none; color: #27384b; }
-.contact-block p a:hover { text-decoration: none; color: #27384b; }
 .three-in-line-blocks{
     font-size: 0;
 }
@@ -132,4 +130,12 @@ img{
 }
 .black-block a:hover{
     background: #1E1E1E;
+}
+footer {
+    font-family: "Gotham-Light";
+    font-size: 12px;
+    color: #27384b;
+    padding:0 0 10px 0;
+    background: #fdf1e3;
+    text-align: center;
 }
