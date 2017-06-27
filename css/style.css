@@ -66,12 +66,13 @@ img{
     display: block;
     margin:0;
 }
-.contact-block p{
+.contact-block p, .contact-block a{
     font-family: "Gotham-Light";
     font-size: 27px;
     color: #27384b;
     display: block;
     margin:0;
+    text-decoration: none;
 }
 .three-in-line-blocks{
     font-size: 0;
