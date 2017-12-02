@@ -143,3 +143,9 @@ footer {
     background: #fdf1e3;
     text-align: center;
 }
+.lang-pick {
+    position:absolute;right:5vw;color:white;top:1vw;
+}
+.lang-pick a {
+    color:white;
+}
