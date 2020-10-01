@@ -9,8 +9,8 @@
     }
     .banner p {
         margin: 8vw 0 0;
-        font-size: 7.7vw;
-        width: 74vw;
+        font-size: 6vw;
+        width: 88vw;
     }
     .beige-block {
         padding-right: 7vw;
@@ -30,6 +30,13 @@
     }
     .contact-block p {
         font-size: 5.5vw;
+    }
+    .three-in-line-blocks.beige-bg {
+        padding-bottom: 10vh;
+    }
+    .three-in-line-blocks.beige-bg .qq {
+        padding: 2vw 6vw;
+        width: 100%;
     }
     .three-in-line-blocks .qq {
         height: 50vw;

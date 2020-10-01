@@ -27,7 +27,9 @@ img{
     justify-content: center;
 }
 .banner a{
+    display: inline-block;
     color:white;
+    margin: 0 0 4vh;
     padding: 17px 28px 19px;
     font-size: 92px;
     text-decoration: none;
@@ -48,6 +50,9 @@ img{
     font-size: 77px;
     font-family: "Gotham-XLight";
     line-height: 1.2;
+}
+.beige-block.white {
+    padding-bottom: 10vh;
 }
 .beige-block p {
     font-size: 50%;
@@ -159,6 +164,7 @@ footer {
     right:5vw;
     color:white;
     top:1vw;
+    font-family: "Gotham-Medium";
 }
 .lang-pick a {
     color:white;
