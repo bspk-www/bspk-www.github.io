@@ -13,8 +13,8 @@
         width: 74vw;
     }
     .beige-block {
-        height: 50vw;
-        padding: 0px 7vw;
+        padding-right: 7vw;
+        padding-left: 7vw;
         font-size: 4.5vw;
         line-height: 1.3;
     }

@@ -13,8 +13,8 @@
         width: 54vw;
     }
     .beige-block {
-        height: 34vw;
-        padding: 0px 5vw;
+        padding-right: 5vw;
+        padding-left: 5vw;
         font-size: 4vw;
     }
     .contact-block {

@@ -17,7 +17,7 @@ img{
 }
 .banner{
     background-color: #e38600;
-    background: url('../images/banner-02.jpg') no-repeat center;
+    background: url('../images/banner.jpg') no-repeat center;
     background-size: cover;
     height: 940px;
     width: 100%;
@@ -49,12 +49,11 @@ img{
     font-family: "Gotham-XLight";
     line-height: 1.2;
 }
-.beige-block .qq {
-    color:#27384b;
-    font-size: 38px;
-    font-family: "Gotham-Light";
-    margin: 38px 0;
-    line-height: 1.2;
+.beige-block p {
+    font-size: 50%;
+}
+.beige-bg {
+    background: #fdf1e3;
 }
 .contact-block {
     width: 100%;
@@ -82,6 +81,13 @@ img{
     text-decoration: none;
     color: #27384b;
 }
+
+.three-in-line-blocks.beige-bg .qq {
+    height: auto !important;
+    background: none !important;
+    border: none !important;
+}
+
 .three-in-line-blocks{
     font-size: 0;
 }
@@ -153,8 +159,6 @@ footer {
     right:5vw;
     color:white;
     top:1vw;
-    box-shadow: 0 0px 50px 50px #ba6c0280;
-    background: #ba6c0280;
 }
 .lang-pick a {
     color:white;
