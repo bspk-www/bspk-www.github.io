@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/style1920-960.css" type="text/css" rel="stylesheet">
+    <link href="css/style960-680.css" type="text/css" rel="stylesheet">
+    <link href="css/style680-480.css" type="text/css" rel="stylesheet">
+    <link href="css/style480-320.css" type="text/css" rel="stylesheet">
+    <link href="fonts/fonts.css" type="text/css" rel="stylesheet">
+    <title>BSPK</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div class="lang-pick">
+    <a href="/">English</a> |
+    French
+</div>
+<div class="global-wrapper">
+    <div class="banner">
+        <div>
+            <a href="/">BSPK</a>
+            <p style="line-height: 1.5">Une plateforme digitale pour aider les marques à davantage personnaliser l'expérience d’achat, augmenter les ventes et la fidélisation client</p>
+        </div>
+    </div>
+    <div class="beige-block white">
+        Nous connectons vos clients à vos vendeurs depuis votre site e-commerce ou en boutique via des services de communication mobile et de vidéo
+    </div>
+    <div class="three-in-line-blocks beige-bg">
+        <div class="qq"><p>Fidélisez votre clientèle en fluidifiant son parcours d’achat</p></div>
+        <div class="qq"><p>Améliorez le taux de conversion grâce à un accès instantané au stock, aux visuels des produits et aux données de ventes</p></div>
+        <div class="qq"><p>Améliorez la satisfaction client via une communication et des choix personnalisés</p></div>
+    </div>
+    <div class="three-in-line-blocks" id="three-1">
+        <div class="qq ww" style="background: url(images/1.jpg) no-repeat center;"></div>
+        <div class="qq" id="text-1">
+            <h2>Pour les conseillers de vente</h2>
+            <p>Personnalisez la relation client</p>
+            <p>Engagez et ravissez vos clients</p>
+        </div>
+        <div class="qq ww" style="background: url(images/2.jpg) no-repeat center;"></div>
+        <div class="qq" id="text-2">
+            <p>Proposez une expérience d’achat mémorable</p>
+            <p>Augmentez vos ventes, soyez récompensé pour toutes les interactions clients</p>
+        </div>
+        <div class="qq ww" style="background: url(images/3.jpg) no-repeat center;"></div>
+        <div class="qq ww" style="background: url(images/4.jpg) no-repeat center;"></div>
+    </div>
+    <div class="beige-block">
+        &ldquo;BSPK a été comme un second souffle. C’est mon outil préféré en boutique, et je fais mes ventes avec tout le temps! Mes clients adorent l’expérience.&rdquo;<br><br>
+        <p>Un conseiller de vente d’une des plus grandes maisons utilisant BSPK</p>
+    </div>
+    <div class="three-in-line-blocks" id="three-2">
+        <div class="qq" id="text-3">
+            <h2>Pour les marques</h2>
+            <p>Activez de nouveaux clients depuis le site web ou la boutique</p>
+            <p>Délivrez une meilleure expérience client</p>
+        </div>
+        <div class="qq ww" style="background: url(images/5.jpg) no-repeat center;"></div>
+        <div class="qq" id="text-4">
+            <p>Responsabilisez vos vendeurs</p>
+            <p>Accélérer votre transformation digitale</p>
+        </div>
+        <div class="qq ww" style="background: url(images/6.jpg) no-repeat center;"></div>
+        <div class="qq" id="text-5">
+            <p>Fidélisez durablement l’ensemble de votre segmentation clients</p>
+            <p>Exploitez le pouvoir des données de vente</p>
+        </div>
+        <div class="qq ww" style="background: url(images/7.jpg) no-repeat center;"></div>
+    </div>
+    <div class="black-block">
+        <div>En savoir plus?</div>
+        <a href="mailto:contact@bspk.com">Contactez-nous</a>
+    </div>
+    <div class="contact-block">
+        <h2>Contactez-nous</h2>
+        <p>+1 415-244-7777<br>
+        <a href="mailto:contact@bspk.com">contact@bspk.com</a><br>
+        @BSPKluxury
+        </p>
+    </div>
+</div>
+<footer>&copy; 2020 BSPK</footer>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(window).on('resize',resizeForBlock);
+        
+        function resizeForBlock(){
+            var width=$(window).width();
+            if( width>681 && !$('body').hasClass('desktop') ){
+                desktop()
+            }else if( width<680 && width>481 && !$('body').hasClass('tablet') ){
+                tablet();
+            }else if( width<480 && !$('body').hasClass('mobile') ){
+                mobile();
+            }
+        }
+        function desktop(){
+            $('body').removeClass('mobile tablet').addClass('desktop');
+            $('#three-1 .ww:eq(0)').after($('#text-1'));
+            $('#three-1 .ww:eq(1)').after($('#text-2'));
+            $('#three-2 .ww:eq(0)').before($('#text-3'));
+            $('#three-2 .ww:eq(0)').after($('#text-4'));
+        }
+        function tablet(){
+            $('body').removeClass('mobile desktop').addClass('tablet');
+            $('#three-1 .ww:eq(0)').after($('#text-1'));
+            $('#three-1 .ww:eq(2)').after($('#text-2'));
+            $('#three-2 .ww:eq(0)').before($('#text-3'));
+            $('#three-2 .ww:eq(1)').after($('#text-4'));
+        }
+        function mobile(){
+            $('body').removeClass('tablet desktop').addClass('mobile');
+            $('#three-1 .ww:eq(0)').after($('#text-1'));
+            $('#three-1 .ww:eq(2)').after($('#text-2'));
+            $('#three-2 .ww:eq(0)').after($('#text-3'));
+            $('#three-2 .ww:eq(2)').after($('#text-4'));
+        }
+        resizeForBlock();
+    });
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102177077-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
