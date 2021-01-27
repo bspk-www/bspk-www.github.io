@@ -1,0 +1,184 @@
+/**
+ * Custom global styles & resets here.
+ *
+ * ref：https://v1.vuepress.vuejs.org/config/#index-styl
+ */
+
+*, *::before, *::after
+  box-sizing border-box
+
+body
+  -webkit-font-smoothing subpixel-antialiased
+  overflow-x hidden
+  margin 0
+  default-font-family()
+  background-color $lightBeige
+
+  @media (min-width $MQxl)
+    background-position center center
+    background-size 1200px
+    background-image linear-gradient( 90deg, $darkBeige, $darkBeige 1px, $lightBeige 1px, $lightBeige 401px, $darkBeige 401px, $darkBeige 402px, $lightBeige 402px, $lightBeige 803px, $darkBeige 803px, $darkBeige 804px, $lightBeige 804px)
+
+h1, h2, h3, h4
+  font-size inherit
+  margin-bottom inherit
+  margin-top inherit
+  font-weight inherit
+
+address
+  font-style normal
+
+a
+  text-decoration none
+  color inherit
+  transition opacity 0.3s
+
+  &:not(.button):hover
+    opacity 0.7
+    transition opacity 0.3s
+
+button
+  border none
+  margin 0
+  padding 0
+  width auto
+  overflow visible
+  background transparent
+  color inherit
+  font inherit
+  line-height normal
+  -webkit-font-smoothing inherit
+  -moz-osx-font-smoothing inherit
+  -webkit-appearance none
+
+  &:hover, &:active
+    outline none
+
+ul:not(.styled-list)
+  list-style none 
+  margin 0
+  padding 0
+
+  li
+    padding 0
+
+.styled-list
+  li
+    margin-bottom 20px
+    
+    & > ul
+      margin-top 20px
+
+img
+  max-width 100% 
+
+.sr-only
+  position absolute
+  width 1px
+  height 1px
+  padding 0
+  margin -1px
+  overflow hidden
+  clip rect(0,0,0,0)
+  white-space nowrap
+  border 0
+
+.hide-desktop
+  @media (min-width $MQlg)
+    display none
+
+.container
+  @media (min-width $MQxl)
+    max-width $MQxl
+    margin 0 auto
+
+.c-scrollbar
+  z-index 1000
+
+@keyframes loading 
+  0%
+    transform rotate(0deg)
+  100% 
+    transform rotate(360deg)
+
+@keyframes slide-up
+  0% 
+    opacity: 0;
+    transform: translateY(100%);
+  100% 
+    opacity: 1;
+    transform: translateY(0);
+
+.slide-fade-enter-active
+  transition all .3s ease
+
+.slide-fade-leave-active
+  transition all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)
+
+.slide-fade-enter, .slide-fade-leave-to
+  transform translateX(10px)
+  opacity 0
+
+.fade-enter-active, .fade-leave-active 
+  transition opacity .5s
+
+.fade-enter, .fade-leave-to 
+  opacity 0
+
+.cookie__floating
+  background $black
+  padding 30px
+  color $white
+  font-size 15px
+  line-height 20px
+  font-weight 500
+  border none
+  border-radius 0
+  box-shadow none
+  max-width 370px
+
+  a
+    text-decoration underline
+
+  &__buttons
+    background $black
+
+  &__content
+    max-height none
+    padding 0 50px 20px 0
+    font-weight 500
+
+  &__postpone-button
+    padding 0
+    margin 0
+    position absolute
+    right 30px
+    top 30px
+
+  &__buttons__button--decline
+    color $white
+    border 1px solid alpha($white, 0.8)
+    background $black
+    border-radius 6px
+    padding 15px
+    max-width 100px
+    margin-right 15px
+    font-weight 500
+
+    &:hover
+      background none
+      color inherit 
+    
+  &__buttons__button--accept
+    color $black
+    border 1px solid $white
+    background $white
+    border-radius 6px
+    padding 15px
+    max-width 100px
+    margin-right 15px
+    font-weight 500
+
+    &:hover
+      background $white
+      color $black
