@@ -5,11 +5,9 @@
     <Header 
       :isOffcanvasOpen="isOffcanvasOpen"
       @toggle-offcanvas="toggleOffcanvas"
-      @hide-ticker="hideTicker"
     />
     <Offcanvas 
       :isOpen="isOffcanvasOpen"
-      :isTickerVisible="isTickerVisible"
       @hide-offcanvas="hideOffcanvas"
     />
     <div
@@ -17,7 +15,6 @@
     >
       <main 
         class="main-content"
-        :class="{'main-content--pushed' : isTickerVisible}"
       >
           <component :is="layout"/>
       </main>
@@ -54,29 +51,10 @@ import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css';
 export default {
   data: () => ({
     isOffcanvasOpen: false,
-    isTickerVisible: true,
+    // isTickerVisible: true,
     locomotiveScroll: null,
     scrollInstance: null
   }),
-  mounted() {
-    this.$root.$on('update-locoscroll', this.updateLocoScroll);
-    this.$root.$on('locoscroll-scroll-to-errors', this.scrollToLocoScroll);
-    this.$root.$on('reload-locoscroll', this.reloadLocoScroll);
-    this.isTickerVisible = !localStorage.getItem('ticker-hide');
-
-    import('locomotive-scroll').then(module => {
-      this.locomotiveScroll = module.default;
-      this.initLocoScroll();
-    });
-
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-102177077-1', 'auto');
-    ga('send', 'pageview');
-  },
   computed: {
     layout () {
       if (this.$page.path) {
@@ -89,6 +67,17 @@ export default {
       }
     }
   },
+  mounted() {
+    this.$root.$on('update-locoscroll', this.updateLocoScroll);
+    this.$root.$on('locoscroll-scroll-to-errors', this.scrollToLocoScroll);
+    this.$root.$on('reload-locoscroll', this.reloadLocoScroll);
+    // this.isTickerVisible = !localStorage.getItem('ticker-hide');
+
+    import('locomotive-scroll').then(module => {
+      this.locomotiveScroll = module.default;
+      this.initLocoScroll();
+    });
+  },
   methods: {
     toggleOffcanvas() {
       this.isOffcanvasOpen = !this.isOffcanvasOpen;
@@ -96,10 +85,10 @@ export default {
     hideOffcanvas() {
       this.isOffcanvasOpen = false;
     },
-    hideTicker() {
-      this.isTickerVisible = false;
-      this.scrollInstance.update();
-    },
+    // hideTicker() {
+    //   this.isTickerVisible = false;
+    //   this.scrollInstance.update();
+    // },
     initLocoScroll() {
       this.scrollInstance = new this.locomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
