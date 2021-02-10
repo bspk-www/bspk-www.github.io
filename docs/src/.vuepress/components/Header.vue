@@ -25,6 +25,17 @@
           alt="BSPK"
         >
       </router-link>
+      <div class="header__nav">
+        <nav>
+          <router-link
+            v-for="navElement of $themeConfig.nav"
+            :to="navElement.link"
+            class="header__link"
+          >
+            {{ navElement.text }}
+          </router-link>
+        </nav>
+      </div>
       <div class="header__buttons">
         <!-- <LanguagePicker ref="picker"/> -->
         <a 
@@ -41,6 +52,21 @@
         :isOpen="isOffcanvasOpen"
         @toggle-offcanvas="toggleOffcanvas"
       />
+      <div 
+        v-if="$frontmatter.submenu"
+        class="submenu"
+      >
+        <div class="container">
+          <a 
+            v-for="navLink of $frontmatter.submenuNav"
+            :href="navLink.anchor"
+            class="submenu__anchor"
+            @click="scrollToSection"
+          >
+            {{ navLink.title }}
+          </a>
+        </div>
+      </div>
     </header>
   </div>
 </template>
@@ -60,6 +86,10 @@ export default {
     // this.getTickerHidden();
   },
   methods: {
+    scrollToSection(e) {
+      e.preventDefault();
+      this.$root.$emit('scroll-to', e.target.getAttribute("href"));
+    },
     hidePicker() {
       if(this.$refs.picker) {
         this.$refs.picker.hideContainer();
@@ -97,6 +127,28 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.submenu
+  display none
+
+  @media (min-width $MQlg)
+    position absolute
+    bottom -70px
+    left 0
+    width 100%
+    height 70px
+    background $lightBeige
+    border-bottom 1px solid $darkBeige
+    text-align center
+    display flex
+    align-items center
+    justify-content center
+
+    a
+      margin 0 20px
+      font-weight 500
+      color $darkGrey
+      font-size 17px
+
 .wrapper--ticker-show
   height 70px
   position fixed
@@ -159,6 +211,9 @@ export default {
   &__logo
     width 80px
 
+  &__nav
+    display none
+
   &__buttons
     display none
 
@@ -167,12 +222,23 @@ export default {
     transition transform .4s ease-in-out
 
   @media (min-width $MQlg)
-    height: 100px
+    height 100px
     padding 0 30px
+
+    &__nav
+      display block
+      position absolute
+      width 100%
+      left 0
+      z-index -1
+      text-align center
+
+      a
+        margin 0 20px 
 
     &__link
       font-size 19px
-      font-weight 500
+      font-weight 400
 
     &__logo
       width 120px

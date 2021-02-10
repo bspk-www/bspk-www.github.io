@@ -81,6 +81,14 @@ export default {
     font-size 35px
     line-height 37px
 
+  &--internal-intro
+    font-size 35px
+    line-height 37px
+
+  &--counter-sections
+    font-size 30px
+    line-height 32px
+
   &--break
     .heading__highlighted
       display block
@@ -97,4 +105,13 @@ export default {
     &--h2
       font-size 48px
       line-height 48px
+
+    &--internal-intro
+      font-size 52px
+      line-height 48px
+
+    &--counter-sections
+      font-size 42px
+      line-height 48px
+      
 </style>
