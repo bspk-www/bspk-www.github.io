@@ -1,0 +1,5 @@
+{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "bspk.com",
+  "Id": "5512cb6f-3e7c-4bd8-954d-7726aa0aa0ab"
+}
