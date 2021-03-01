@@ -38,7 +38,7 @@
       </div>
 
       <div slot="message">
-        This website uses cookies to improve your experience. <router-link to="/cookie-policy">See Cookie Policy</router-link>
+        {{ $themeConfig.cookieNotice.text }} <router-link to="/cookie-policy">See Cookie Policy</router-link>
       </div>
       <div slot="acceptContent">
           Accept
@@ -71,6 +71,11 @@ export default {
     }
   },
   mounted() {
+    import('locomotive-scroll').then(module => {
+      this.locomotiveScroll = module.default;
+      this.initLocoScroll();
+    });
+    
     this.$root.$on('update-locoscroll', this.updateLocoScroll);
     this.$root.$on('locoscroll-scroll-to-errors', this.scrollToLocoScroll);
     this.$root.$on('reload-locoscroll', this.reloadLocoScroll);
@@ -81,11 +86,6 @@ export default {
       });
     });
     // this.isTickerVisible = !localStorage.getItem('ticker-hide');
-
-    import('locomotive-scroll').then(module => {
-      this.locomotiveScroll = module.default;
-      this.initLocoScroll();
-    });
   },
   methods: {
     toggleOffcanvas() {
@@ -134,6 +134,9 @@ export default {
           case "playWorkshopVideo" :
             videoElement = document.getElementById('workshopVideoElement');
             break;
+          case "playTechnologyVideo" :
+            videoElement = document.getElementById('technologyVideoElement');
+            break;
         }
 
         videoElement.play();
@@ -178,6 +181,6 @@ export default {
   &--pushed
     padding-top 130px
 
-  @media (min-width $MQlg)
+  @media (min-width $MQxl)
     padding-top 100px
 </style>

@@ -9,8 +9,8 @@
       class="aligned-text__wrapper"
     >
       <p
-      v-for="paragraph in $frontmatter.alignedText"
-      v-html="paragraph"
+        v-for="paragraph in $frontmatter.alignedText"
+        v-html="paragraph"
       >
       </p>
     </div>
@@ -32,6 +32,13 @@
       margin-bottom 0
 
   @media (min-width $MQlg)
+    padding 80px 40px
+
+    &__wrapper
+      font-size 24px
+      line-height 1.2
+
+  @media (min-width $MQxl)
     margin-top 175px
     padding 0
 

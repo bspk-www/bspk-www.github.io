@@ -65,15 +65,16 @@ export default {
   width 100%
   border-top 1px solid $grey
   font-size 22px
-  z-index 100
+  z-index 200
   transition all 0.3s ease
   transform translateY(-100%)
   visibility hidden
+  height calc(100vh - 60px)
+  overflow scroll
 
   &__links
     line-height 2.25
     padding 28px
-    border-bottom 1px solid $grey
 
     & > *
       &:last-child
@@ -92,6 +93,9 @@ export default {
   &--pushed
     top 130px
 
-  @media (min-width $MQlg)
+  @media (min-width $MQmd)
+    font-size 30px
+
+  @media (min-width $MQxl)
     display none
 </style>

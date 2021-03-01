@@ -33,7 +33,15 @@
   &__content
     color $darkGrey
 
-  @media (min-width $MQlg)
+  @media (min-width $MQmd)
+    padding 100px 120px 100px
+
+  @media (min-width $MQlg) 
+    padding 100px 100px 100px
+    font-size 30px
+    line-height 1.2
+
+  @media (min-width $MQxl)
     padding 200px 0 0
     text-align left
 

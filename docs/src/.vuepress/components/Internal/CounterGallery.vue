@@ -6,17 +6,49 @@
   >
     <header
       v-if="$frontmatter.counterGallery.title && $frontmatter.counterGallery.intro"
-      data-scroll
       class="counter-gallery__header container"
     >
-      <Heading
-        :firstPartHeadlines="[$frontmatter.counterGallery.title]"
-        tag="h2"
-        tagStyle="h1"
-      />
-      <p>
-        {{ $frontmatter.counterGallery.intro }}
-      </p>
+      <div data-scroll>
+        <Heading
+          :firstPartHeadlines="[$frontmatter.counterGallery.title]"
+          tag="h2"
+          tagStyle="h1"
+          class="heading--default"
+        />
+        <p
+          v-for="text of $frontmatter.counterGallery.intro"
+          class="counter-gallery__intro"
+        >
+          {{ text }}
+        </p>
+      </div>
+
+      <div
+        data-scroll
+        data-scroll-call="playTechnologyVideo"
+        class="video-wrapper"
+        v-if="$frontmatter.counterGallery.video"
+      >
+        <video
+          autoplay=""
+          loop=""
+          muted=""
+          playsinline=""
+          id="technologyVideoElement"
+        >
+          <source :src="isMobile ? $withBase($frontmatter.counterGallery.video.mobile) : $withBase($frontmatter.counterGallery.video.desktop)" type="video/mp4">
+        </video>
+      </div>
+
+      <div data-scroll>
+        <Heading
+          :firstPartHeadlines="[$frontmatter.counterGallery.subtitle]"
+          tag="h2"
+          tagStyle="h1"
+          class="counter-gallery__subtitle"
+          v-if="$frontmatter.counterGallery.subtitle"
+        />
+      </div>
     </header>
   
     <article
@@ -72,6 +104,9 @@
 
 <script>
 export default {
+  data: () => ({
+    isMobile: false
+  }),
   props: {
     page: {
       type: String,
@@ -81,6 +116,9 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  mounted() {
+    this.isMobile = window.innerWidth < 500
   }
 }
 </script>
@@ -94,13 +132,94 @@ export default {
     margin-bottom 120px
 
     .counter-section
-
       &__content
         padding 0 30px
 
       &__image
         img
           min-height 210px
+
+  &--technology
+    padding 0
+
+    .video-wrapper
+      padding 90px 0
+      background $black
+
+      video
+        width 100%
+
+    .counter-gallery__header
+      display flex
+      flex-direction column-reverse
+      margin-bottom 115px
+
+      & > :first-child
+        padding 0 30px
+
+      .heading--default
+        default-font-family()
+        text-transform none
+        font-weight 400
+        font-size 30px
+        line-height 34px
+        margin-top 93px
+
+    .counter-gallery__intro
+      color $darkGrey
+      font-size 24px
+      line-height 30px
+      margin-bottom 0
+      margin-top 0
+      text-align center
+
+    .counter-gallery__subtitle
+      display none
+
+    .counter-section__content
+      padding 0 30px
+
+    .counter-section:last-child
+      margin-bottom 115px
+
+    .counter-section__image
+      img
+        min-height 300px
+
+    @media (min-width $MQlg)
+      .video-wrapper
+        background none
+        padding 80px 0 50px
+
+    @media (min-width $MQxl)
+      .video-wrapper
+        padding 80px 0 295px
+        background none
+
+      .counter-gallery__header
+        flex-direction column
+        
+        .heading
+          margin-bottom 40px
+
+        .heading--default
+          font-size 50px
+          line-height 54px
+
+      .counter-gallery__intro
+        font-weight 300
+        font-size 40px
+        line-height 44px
+
+      .counter-gallery__subtitle
+        display block
+
+      .counter-section:last-child
+        margin-bottom 200px
+
+      .counter-section__image
+        img
+          min-height 550px
 
   &__header
     margin-bottom 55px
@@ -114,11 +233,14 @@ export default {
       font-size 18px
       line-height 24px
 
-  @media (min-width $MQlg)
-    padding 0
-
+  @media (min-width $MQmd)
     &__header
       text-align center
+
+  @media (min-width $MQlg)
+    padding 0 30px
+
+    &__header
       max-width 770px
       margin 0 auto
 
@@ -128,7 +250,7 @@ export default {
         line-height 34px
 
     &--benefits
-      margin-top 120px
+      margin-top 0
       margin-bottom 220px
 
       .counter-section
@@ -137,12 +259,41 @@ export default {
 
         &__image
           img
-            min-height 660px
+            min-height 440px
+
+        &:first-child
+          margin-top 0
+
+    &--technology
+      .counter-section
+        &__image
+            img
+              min-height 440px
 
     &--about
       .counter-section
         .heading
           padding-right 100px
+
+  @media (min-width $MQxl)
+    padding 0
+
+    &--benefits
+      margin-top 120px
+
+      .counter-section
+        &:first-child
+          margin-top 80px
+
+        &__image
+          img
+            min-height 660px
+
+    &--technology
+      .counter-section
+        &__image
+            img
+              min-height 560px
 
 .counter-section
   margin-bottom 55px
@@ -164,7 +315,7 @@ export default {
         list-style none
 
       li
-        margin-bottom 20px
+        margin-bottom 10px
         padding-left 20px
         position relative
 
@@ -183,7 +334,6 @@ export default {
           top 10px
 
   &__image
-
     .desktop
       margin 0 auto
       display none
@@ -204,13 +354,16 @@ export default {
       text-align center
       grid-column 1 / span 6
 
+    img
+      min-height 340px
+
     &__content
       grid-column 7 / span 6
       text-align left
 
   @media(min-width $MQlg)
-    margin-top 180px
-    margin-bottom 0
+    img
+      min-height 466px
 
     &:first-of-type
       margin-top 80px
@@ -221,6 +374,18 @@ export default {
 
       .mobile
         display none
+
+  @media(min-width $MQxl)
+    margin-top 180px
+    margin-bottom 0
+
+    img
+      min-height 535px
+
+    &__copy
+      &--list
+        li
+          margin-bottom 5px
 
       img
         width 100%

@@ -1,4 +1,4 @@
- <template>
+<template>
   <section 
     class="team-section container"
     :id="$frontmatter.teamSection.id"
@@ -111,7 +111,16 @@ export default {
     &__ceo
       text-align center
 
+    img
+      min-height 440px
+
+    &__header p
+      text-align center
+
   @media (min-width $MQlg)
+    margin-top 150px
+
+  @media (min-width $MQxl)
     margin-top 300px
 
     .heading
@@ -126,6 +135,7 @@ export default {
         color $darkGrey
         margin-top 40px
         margin-bottom 40px
+        text-align left
 
     &__visuals
       margin-top 50px

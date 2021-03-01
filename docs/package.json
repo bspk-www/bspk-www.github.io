@@ -8,7 +8,7 @@
     "email": "hanna.domagala@applover.com"
   },
   "license": "MIT",
-  "repository": "https://github.com/domagalahanna/bspk/",
+  "repository": "https://github.com/bspk-www/bspk-www.github.io",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src",
@@ -23,6 +23,7 @@
     "locomotive-scroll": "^4.0.6",
     "vue-carousel": "^0.18.0",
     "vue-cookie-accept-decline": "^5.4.0",
+    "vueperslides": "^2.12.1",
     "vuepress-plugin-img-lazy": "^1.0.4",
     "vuepress-plugin-robots": "^1.0.1"
   }

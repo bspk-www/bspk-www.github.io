@@ -67,12 +67,34 @@
       &:last-child
         margin-bottom 0
 
+  @media (min-width $MQmd)
+    &__image
+      img
+        min-height 555px
+
+    &__content
+      text-align center
+
   @media (min-width $MQlg)
+    margin-bottom 100px
+
+    &__content
+      font-size 24px
+      line-height 1.2
+
+    &__image
+      img
+        min-height 740px
+
+  @media (min-width $MQxl)
     margin-top 300px
     margin-bottom 300px
 
     &__image
       grid-column 1 / span 4
+
+      img
+        min-height 555px
 
       &--desktop
         display block
@@ -89,6 +111,7 @@
       justify-content center
       margin-top 0
       padding 0
+      text-align left
 
       .heading
         text-align left
