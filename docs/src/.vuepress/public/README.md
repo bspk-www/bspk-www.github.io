@@ -1,7 +1,7 @@
 # BSPK website
 
 ## Branches
-- `main` - result static pages, branched used by GitHub Pages
+- `master` - result static pages, branched used by GitHub Pages
 - `source` - source code for development
 - `backup` - backup branch for previous version of the website
 
