@@ -11,7 +11,7 @@
 2. `cd docs`
 3. `yarn install`
 4. After packages installed run `yarn dev` to serve development page on localhost
-5. To deploy your changes run `yarn deploy` to run bash script which will build static version and push it to `main` branch automatically
+5. To deploy your changes run `yarn deploy` to run bash script which will build static version and push it to `master` branch automatically
 
 ## Tech stack
 - Vuepress - [https://vuepress.vuejs.org/]
