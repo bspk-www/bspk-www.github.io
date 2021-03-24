@@ -1,14 +1,17 @@
 ---
-title: Human connections elevating customer experiences for all
+metaTitle: "BSPK  |  Grow your retail sales with the easiest virtual clienteling solution integrated with Cegid Y2, Salesforce and more."
+title: "Homepage"
 hero:
   headlines:
-    - "Human connections"
-    - "elevating customer"
-    - "experiences"
-  highlighted: "for all"
+    mobile:
+      - "Clienteling"
+      - "for all"
+    desktop:
+      - "Clienteling for all"
+  highlighted: "made easy"
   ctaCopy: "Request a Demo"
   ctaLink: "contact/"
-  content: "BSPK helps companies map tailored user journeys capturing rich data to drive sustainable growth and loyalty."
+  content: "BSPK is the most advanced platform for sales teams to sell with video, chat and curated experiences to engage, convert and retain customers."
   video: "videos/HeroVideo.mp4"
   videoMobile: "videos/HeroVideoMobile.mp4"
 testimonials:
@@ -21,7 +24,18 @@ testimonials:
   - logo: "images/SiliconValley.png"
     alt: "Silicon Valley Business Journal"
     text: "The brand that is all about helping others making the sale"
-intro: "Our technology fosters invaluable human exchanges paving the way to the future of modern commerce."
+intro:
+  text: "Human connections elevating customer experiences"
+  icons:
+    - text: "From your website"
+      src: "images/homepage/icon_1.svg"
+      alt: "Website"
+    - text: "In your retail locations"
+      src: "images/homepage/icon_2.svg"
+      alt: "Location"
+    - text: "For your distant sellers"
+      src: "images/homepage/icon_3.svg"
+      alt: "Earth"
 video: "videos/BSPK_Main_Video.mp4"
 videoMobile: "videos/BSPK_Main_Video_Mobile.mp4"
 solutions:
@@ -30,15 +44,15 @@ solutions:
       - "user journeys"
     highlighted: "beyond"
     headlineSecondPart: "imagination"
-    copy: "We power superior digital customer engagement."
+    copy: "Use qualitative customer data to create the right experience at the right time for optimal sales conversion."
     numbers: "50%"
     description: "upselling rate increase"
     image:
       mobile:
-        src: "images/homepage/WorkingMan.jpg"
+        src: "images/homepage/CosmeticStore.jpg"
         alt: "Man working on a laptop"
       desktop:
-        src: "images/homepage/WorkingManDesktop.jpg"
+        src: "images/homepage/CosmeticStoreDesktop.jpg"
         alt: "Man working on a laptop"
     visuals:
       device: "images/iphone.png"
@@ -50,9 +64,9 @@ solutions:
       - "conversions"
     highlighted: " beyond"
     headlineSecondPart: "expectations"
-    copy: "We empower customers with informed recommendations."
-    numbers: "2X"
-    description: "uplift in sales conversions"
+    copy: "Guide sales assistants to realize your client engagement strategy."
+    numbers: "3X"
+    description: "prospect conversion"
     image:
       mobile:
         src: "images/homepage/ManWithCoffee.jpg"
@@ -70,15 +84,15 @@ solutions:
       - "curations"
     highlighted: " beyond"
     headlineSecondPart: "ambitions"
-    copy: "We empower brands with actionnable customer knowledge."
+    copy: "Leverage strategic sales personalization to immerse customers into the brand universe."
     numbers: "3X"
-    description: "growth in customer retention"
+    description: "customer retention"
     image:
       mobile:
-        src: "images/homepage/ShoesAccessories.jpg"
+        src: "images/homepage/WomanAdvisor.jpg"
         alt: "Shoes and belt"
       desktop:
-        src: "images/homepage/ShoesAccessoriesDesktop.jpg"
+        src: "images/homepage/WomanAdvisorDesktop.jpg"
         alt: "Shoes and belt"
     visuals:
         device: "images/iPad.png"
@@ -92,6 +106,5 @@ solutions:
   <Homepage-NewsroomMobile/>
 </ClientOnly>
 <Homepage-Intro/>
-<Homepage-Video/>
 <Homepage-Solutions/>
 <Newsletter/>

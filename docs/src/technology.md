@@ -3,7 +3,7 @@ title: Technology
 permalink: /technology
 intro:
   title: All-in-one solution
-  content: The most user-centric engagement hub created by customers for customers, and engineered for enterprise
+  content: Connected to your existing ecosystem, BSPK is the most user-centric engagement hub created by customers for customers, and engineered for success
   id: solution-section
 alignedImage:
   src: "/images/technology/BSPK_Technology_Main.jpg"
@@ -15,39 +15,32 @@ features:
       title: Interface
       list:
         - Simple, user-friendly, fun
-        - Intuitive and responsive
+        - Intuitive, visual, responsive
         - Omni-ready and agile
         - Works globally
     - icon: "/images/icons/chat-circle-text-light.png"
       title: Interactions
       list:
-        - "Multi-channel: SMS, WhatsApp, WeChat, Email..."
-        - Rich visual communications (chat & video)
-        - Authentic + control of image
+        - "Multi-channel: SMS, WhatsApp, Apple Messages, Line, Email..."
+        - Rich visual communications via chat & video
+        - Authentic control of brand image
     - icon: "/images/icons/rocket-launch-light.png"
       title: Integration
       list:
-        - Easy and fast integration in clients’ ecosystem (I.T, CRM...)
-        - Dynamic customer and product segmentation
-        - Progressive and evolutive
+        - Easy to launch, stand-alone or integrated
+        - APIs to connect to Cegid Y2, Salesforce, Shopify and more
+        - Dynamic customer and product search
 counterGallery:
   id: counter-section
-  title: By the way - our technology delivers humanity, so let’s be clear…
   subtitle: Functionalities
-  intro:
-    - We are not an AI resource 
-    - We are not a CRM tool 
-    - We are not bots  
-  video:
-    mobile: "/videos/BSPK_Technology_Mobile.mp4"
-    desktop: "/videos/BSPK_Technology.mp4"
   sections:
     - title: Customer knowledge
       content: 
         - Purchase history and intent
-        - Segmentation and classification
-        - Wishlist
-        - And much more...
+        - Imported CRM info
+        - Communication preferences
+        - GDPR consent
+        - Notes, Wishlist and much more…
       image:
         src: "/images/technology/counter1.jpg"
         alt: Blonde woman talking to the phone
@@ -56,10 +49,11 @@ counterGallery:
         alt: Blonde woman talking to the phone
     - title: Customer management
       content: 
-        - Tasks and appointments 
-        - Reminders
-        - Metrics
-        - And much more...
+        - To-do lists and reminders
+        - Appointment scheduling
+        - Customizable templates
+        - Customer feedback
+        - Reporting and much more…
       image:
         src: "/images/technology/counter2.jpg"
         alt: Payment system
@@ -68,10 +62,11 @@ counterGallery:
         alt: Blonde woman talking to the phone
     - title: Customer engagement
       content: 
-        - User journey curation + tracking
-        - Instant messaging (SMS, WhatsApp, WeChat, Email...)
-        - Visual communications
-        - And much more...
+        - Adyen payments
+        - Video chat and messaging
+        - Apple Messages, SMS, WhatsApp, Line, Email
+        - Customized shopping journeys
+        - Visual curation and much more…
       image:
         src: "/images/technology/counter3.jpg"
         alt: Payment system
@@ -79,11 +74,12 @@ counterGallery:
         src: "/images/technology/counter3.jpg"
         alt: Blonde woman talking to the phone
     - title: Product management
-      content: 
-        - Instant product availability scan 
-        - Access to catalogue imagery
-        - Delivery planning
-        - And much more...
+      content:
+        - Full visual catalogue
+        - In-hand stock consultation
+        - Pick list
+        - Customizable product search
+        - Boutique and region assortment
       image:
         src: "/images/technology/counter4.jpg"
         alt: Payment system

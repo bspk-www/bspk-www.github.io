@@ -12,8 +12,14 @@
           Home
         </router-link>
       </li>
-      <li v-for="navElement of $themeConfig.nav">
-        <router-link :to="navElement.link">
+      <li
+        v-for="(navElement,index) of $themeConfig.nav"
+        :key="index"
+      >
+        <router-link
+          :to="navElement.link"
+          @click.native="reloadIfCurrent(navElement.link)"
+        >
           {{ navElement.text }}
         </router-link>
       </li>
@@ -23,7 +29,10 @@
         </a>
       </li>
       <li>
-        <router-link to="/contact/">
+        <router-link
+          to="/contact/"
+          @click.native="reloadIfCurrent('/contact/')"
+        >
           Request a demo
         </router-link>
       </li>
@@ -51,6 +60,10 @@ export default {
   methods: {
     hideOffcanvas() {
       this.$emit('hide-offcanvas');
+    },
+    reloadIfCurrent(url) {
+      const isCurrent = this.$route.path === url
+      if(isCurrent) this.$router.go(this.$router.currentRoute)
     }
   }
 }

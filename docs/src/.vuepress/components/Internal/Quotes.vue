@@ -87,6 +87,8 @@ export default {
       display none
 
   @media (min-width $MQxl)
+    margin-bottom 200px
+
     &__header
       margin-top 30px
 

@@ -3,7 +3,7 @@ title: Customers
 permalink: /customers
 intro:
   title: Our customers
-  content: Brands and retailers are monetizing their customer experiences with BSPK
+  content: Companies are using BSPK to develop and implement their sales engagement strategy in order to increase sales and build customer loyalty
   id: customers-section
 alignedImage:
   src: "/images/customers/BSPK_Customer.jpg"
@@ -22,20 +22,60 @@ quotes:
     - content: Love BSPK, easy to use, great tool, love having pictures to share with clients!
       author: Sales advisor, luxury brand
   image: '/images/customers/TestimonialClientHappy.jpg'
+counterGallery:
+  id: counter-section
+  title: Success stories
+  sections:
+    - title: TOP LUXURY FASHION HOUSE
+      content:
+        - title: "Double digit KPI growth:"
+          list:
+            - Average purchase value and UPT
+            - Customer engagement
+            - Store visits frequency
+        - title: Monthly sales goals now consistently exceeded with BSPK
+        - title: "Other benefits:"
+          list:
+            - Transitioning low and mid-tier customers to top clients
+            - Aspirational and VIP customers feeling very special and re-living again the feelings and emotions experienced in store
+            - Enhanced opportunity to train sales advisors and increase customer and product knowledge
+      image:
+        src: "/images/customers/luxuryfashionhouse.jpg"
+        alt: Luxury fashion purse
+      mobileImage:
+        src: "/images/customers/luxuryfashionhouse-mobile.jpg"
+        alt: Luxury fashion purse
+    - title: KIDS APPAREL BRAND
+      content:
+        - title: "Double digit KPI growth:"
+          list:
+            - Average purchase value and UPT
+            - Repeat purchase rate via actionable data and informed touch points for distant selling
+            - Recapture rates for lapsed customers once imported in BSPK database
+        - title: Half of overall sales now attributed to BSPK
+        - title: "Other benefits:"
+          list:
+            - Performance or communication issues are addressed to redirect employees and improve the customer experience
+            - Strong team spirit and morale thanks to collective review and celebration of individual successes
+      image:
+        src: "/images/customers/kidsapparelbrand.jpg"
+        alt: Stylish kid
+      mobileImage:
+        src: "/images/customers/kidsapparelbrand-mobile.jpg"
+        alt: Stylish kid
 alignedCarousel:
   image:
     src: '/images/customers/BSPK_Gallery.jpg'
     alt: 'Art gallery'
   title: Who is BSPK for
   slides:
-    - Verticals putting emotion-based relationships at the heart of their USP for long-term profit & CLVT
-    - Businesses looking to optimize their customer engagement strategy with a playful and human touch
-    - Companies seeking to quickly adopt modern technology and be ahead of the game
-    - (r)e-tailers and service providers of all sizes across a wide range of industries
-    - Brands competing with digital players for more direct connections with customers (online/offline)
-    - E-com platforms wanting to differentiate their online experience with deeper human interactions
+    - Companies putting emotion-based relationships at the heart of their unique selling proposition for improved customer experience and lifetime value
+    - Businesses looking to optimize their customer engagement strategy with a human touch
+    - Companies seeking to adopt modern technology and be ahead of the game
+    - Brands looking to gain competitive advantage by owning their customer relationships and providing a better experience online or offline
+    - E-commerce platforms that are too reliant on one-size fits all approach and look to differentiate
     - Brands that are too reliant on wholesalers, and aspiring to a more DTC approach
-    - Organizations with limited tech budgets / no desire to build internally
+    - Organizations looking to move fast and adopt the best-in-class and only complete, cloud-hosted solution at a time when shopping habits have changed
 ---
 
 <Internal-Intro/>
@@ -43,5 +83,6 @@ alignedCarousel:
 <ClientOnly>
   <Internal-Quotes/>
 </ClientOnly>
+<Internal-CounterGallery page="customers"/>
 <Internal-AlignedCarousel/>
 <Newsletter/>

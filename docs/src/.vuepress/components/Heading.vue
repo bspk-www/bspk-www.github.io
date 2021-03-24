@@ -5,8 +5,9 @@
     :class="[ `heading--${tagStyle ? tagStyle : tag}`, { 'heading--break' :  breakLine}]"
   >
     <span 
-      v-for="headline in firstPartHeadlines"
+      v-for="(headline, index) in firstPartHeadlines"
       class="text-wrapper"
+      :key="index"
     >
       <span class="text-wrapper__inner">
         {{ headline }}
@@ -89,6 +90,10 @@ export default {
     font-size 30px
     line-height 32px
 
+  &--hero
+    font-size 48px
+    line-height 1
+
   &--break
     .heading__highlighted
       display block
@@ -113,5 +118,10 @@ export default {
     &--counter-sections
       font-size 42px
       line-height 48px
+
+    &--hero
+      font-size 72px
+      line-height 72px
+      letter-spacing -2.5px
       
 </style>

@@ -1,8 +1,9 @@
 <template>
   <div class="container">
     <article
-      v-for="news of $frontmatter.news"
+      v-for="(news,index) of $frontmatter.news"
       class="news grid-container"
+      :key="index"
     >
       <img-lazy
         :src="news.image.src"

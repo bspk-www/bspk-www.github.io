@@ -5,22 +5,26 @@
     :id="$frontmatter.counterGallery.id"
   >
     <header
-      v-if="$frontmatter.counterGallery.title && $frontmatter.counterGallery.intro"
+      v-if="$frontmatter.counterGallery.title || $frontmatter.counterGallery.subtitle || $frontmatter.counterGallery.intro"
       class="counter-gallery__header container"
     >
       <div data-scroll>
         <Heading
+          v-if="$frontmatter.counterGallery.title"
           :firstPartHeadlines="[$frontmatter.counterGallery.title]"
           tag="h2"
           tagStyle="h1"
           class="heading--default"
         />
-        <p
-          v-for="text of $frontmatter.counterGallery.intro"
-          class="counter-gallery__intro"
-        >
-          {{ text }}
-        </p>
+        <div v-if="$frontmatter.counterGallery.intro">
+          <p
+            v-for="(text, index) of $frontmatter.counterGallery.intro"
+            class="counter-gallery__intro"
+            :key="index"
+          >
+            {{ text }}
+          </p>
+        </div>
       </div>
 
       <div
@@ -40,12 +44,14 @@
         </video>
       </div>
 
-      <div data-scroll>
+      <div
+        data-scroll
+        class="counter-gallery__subtitle"
+      >
         <Heading
           :firstPartHeadlines="[$frontmatter.counterGallery.subtitle]"
           tag="h2"
           tagStyle="h1"
-          class="counter-gallery__subtitle"
           v-if="$frontmatter.counterGallery.subtitle"
         />
       </div>
@@ -54,6 +60,7 @@
     <article
       v-for="(section, index) of $frontmatter.counterGallery.sections"
       class="counter-section container grid-container"
+      :key="index"
     >
       <div 
         class="counter-section__image"
@@ -82,13 +89,39 @@
             tagStyle="counter-sections"
           />
         </div>
+        <div
+          class="counter-section__copy counter-section__copy--list counter-section__copy--condensed"
+          v-if="page === 'customers'"
+        >
+          <div 
+            v-for="(paragraph, index) of section.content"
+            :key="index"
+          >
+            <strong class="counter-section__copy-title">
+              {{ paragraph.title }}
+            </strong>
+            <ul v-if="paragraph.list">
+              <li
+                class=""
+                v-for="(item, index) of paragraph.list"
+                :key="index"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+        </div>
         <div 
           class="counter-section__copy"
           :class="{ 'counter-section__copy--list' : list}"
+          v-else
         >
           <div v-if="list">
             <ul>
-              <li v-for="section of section.content">
+              <li 
+                v-for="(section, index) of section.content"
+                :key="index"
+              >
                 {{ section }}
               </li>
             </ul>
@@ -152,7 +185,7 @@ export default {
     .counter-gallery__header
       display flex
       flex-direction column-reverse
-      margin-bottom 115px
+      margin-bottom 50px
 
       & > :first-child
         padding 0 30px
@@ -172,9 +205,6 @@ export default {
       margin-bottom 0
       margin-top 0
       text-align center
-
-    .counter-gallery__subtitle
-      display none
 
     .counter-section__content
       padding 0 30px
@@ -249,6 +279,10 @@ export default {
         font-size 24px
         line-height 34px
 
+        
+    &--customers
+      padding-bottom 100px
+
     &--benefits
       margin-top 0
       margin-bottom 220px
@@ -261,10 +295,20 @@ export default {
           img
             min-height 440px
 
+        &__copy--list
+          li
+            margin-bottom 25px
+
+            &:last-child
+              margin-bottom 0
+
         &:first-child
           margin-top 0
 
     &--technology
+      .counter-gallery__subtitle
+        margin-top 100px
+
       .counter-section
         &__image
             img
@@ -309,6 +353,11 @@ export default {
     color $darkGrey
     font-size 18px
     line-height 24px
+
+    &-title
+      display block
+      margin-bottom 20px
+      margin-top 20px
 
     &--list
       ul
@@ -411,7 +460,7 @@ export default {
       font-size 22px
       line-height 32px
       margin-top 25px
-      
+
       &--list
         font-size 20px
         line-height 28px
@@ -421,6 +470,11 @@ export default {
 
           &::before
             top 12px
+
+      &--condensed
+        font-size 18px
+        line-height 1.4
+        margin-top 0px
 
     &:nth-of-type(2n)
       .counter-section__content

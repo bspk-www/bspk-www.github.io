@@ -4,11 +4,14 @@
       <div class="hero__video">
         <div class="video-container" data-scroll data-scroll-speed="1">
           <video
-            autoplay=""
-            defaultMuted=""
-            loop=""
-            muted=""
-            playsinline=""
+            :autoplay="true"
+            :defaultMuted="true"
+            :loop="true"
+            :muted="true"
+            :playsinline="true"
+            :controls="false"
+            preload="metadata"
+            ref="heroVideo"
           >
             <source :src="isMobile ? $withBase($frontmatter.hero.videoMobile) : $withBase($frontmatter.hero.video)" type="video/mp4">
           </video>
@@ -16,10 +19,20 @@
       </div>
       <div class="hero__copy">
         <Heading
-          :firstPartHeadlines="$frontmatter.hero.headlines"
+          :firstPartHeadlines="$frontmatter.hero.headlines.mobile"
           :highlighted="$frontmatter.hero.highlighted"
           :breakLine="true"
           tag="h1"
+          tagStyle="hero"
+          class="hero__title--mobile"
+        />
+        <Heading
+          :firstPartHeadlines="$frontmatter.hero.headlines.desktop"
+          :highlighted="$frontmatter.hero.highlighted"
+          :breakLine="true"
+          tag="h1"
+          tagStyle="hero"
+          class="hero__title--desktop"
         />
         <p class="hero__content">
           {{ $frontmatter.hero.content }}
@@ -42,12 +55,17 @@ export default {
   }),
   mounted() {
     this.isMobile = window.innerWidth < 500
+    this.$refs['heroVideo'].play()
   }
 }
 </script>
 
 <style lang="stylus" scoped>
 .hero
+  &__title
+    &--desktop
+      display none
+
   &__copy
     padding 35px 41px 55px 
     text-align center
@@ -65,20 +83,25 @@ export default {
       overflow hidden
       width 100%
 
-      &::after
-        content ''
-        width 100%
-        height 100%
-        background alpha($black, 0.12)
-        display block
-        position relative
-
       video 
-        width 100%
+        width 140%
 
   @media (max-width 360px)
     &__copy
       padding 35px 20px 55px 
+
+  @media (min-width 420px)
+    &__title
+      &--mobile
+        display none
+        
+      &--desktop
+        display block
+
+  @media (min-width $MQlg)
+    &__content
+      width 80%
+      margin 30px auto
   
   @media (min-width $MQxl)
     overflow hidden
@@ -93,9 +116,12 @@ export default {
       line-height 26px
       color $darkGrey
       padding 10px 0
+      max-width 490px
+      width 100%
+      margin 30px 0
 
     &__copy
-      max-width 540px
+      max-width 620px
       text-align left
       padding 0
       order 1
@@ -121,8 +147,8 @@ export default {
           width auto
           height 100%
           position absolute
-          right 50%
-          transform translateX(50%)
+          left 0
+          transform none
 
     &::before
       content ''
@@ -162,15 +188,9 @@ export default {
         video
           height 100%
           position absolute
-          right 50%
-          transform translateX(50%)
+          left 0
+          transform none
 
     &::after
       right 650px
-
-// video
-//   display none
-
-//   @media(min-width $MQlg)
-//     display block
 </style>

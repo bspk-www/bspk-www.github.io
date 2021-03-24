@@ -4,6 +4,7 @@
       class="solution"
       :class="{ 'solution--revert' : index % 2 }"
       v-for="(solution, index) in $frontmatter.solutions"
+      :key="index"
     >
       <div 
         class="solution__visuals visuals"
@@ -78,7 +79,12 @@
         </div>
         <div class="solution__cta">
           <span class="solution__numbers">
-            {{ solution.numbers }}
+            <span class="solution__numbers-pre">
+              UP TO
+            </span>
+            <span class="solution__numbers-amount">
+              {{ solution.numbers }}
+            </span>
           </span>
           <span class="solution__description">
             {{ solution.description }}
@@ -94,7 +100,6 @@
             alt=""
           />
         </router-link>
-      </div>
       </div>
     </article>
   </section>
@@ -119,7 +124,7 @@ export default {
     padding-bottom 160px
 
 .solution
-  padding 100px 37px 0
+  padding 50px 37px 0
 
   &__content
     text-align center
@@ -141,12 +146,21 @@ export default {
     width 87px
     height 87px
     border-radius 50%
-    font-weight 700
+    font-weight 500
     border 2px solid $accentColor
     display flex
+    flex-direction column
     justify-content center
     align-items center
     font-size 36px
+    line-height 1
+
+    &-pre {
+      display block
+      font-size 12px
+      font-weight 700
+      margin-bottom 0
+    }
 
   &__description
     max-width 115px
@@ -181,6 +195,9 @@ export default {
     display flex
     justify-content flex-end
 
+    &:first-child
+      padding 0
+
     &__copy
       font-size 22px
 
@@ -198,7 +215,7 @@ export default {
       justify-content flex-start
 
     &__description
-      max-width 175px
+      max-width 125px
 
     &--revert
       justify-content flex-start
@@ -254,9 +271,9 @@ export default {
           left -156px
 
 .heading
- & > :first-child,
- & > :nth-child(2)
-  display block
+  & > :first-child,
+  & > :nth-child(2)
+    display block
 
 .visuals
   position relative
@@ -317,10 +334,17 @@ export default {
 
   &--messages
     .screen__video
-      height 97%
-      transform translate(4px, 3px)
+      width 100%
+      transform translate(0px, 4px)
 
   &--consultant
+    .screen__image
+      z-index 0
+
+    .screen__video
+      width 190%
+      transform translateX(-28%)
+
     .video-replacement
       transform none
       width 100%

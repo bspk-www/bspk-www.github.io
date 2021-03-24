@@ -1,7 +1,7 @@
 <template>
   <div 
     class="wrapper"
-   >
+  >
     <!-- <div class="ticker">
       More content is in the works and will be live soon!
       <button 
@@ -18,7 +18,10 @@
       class="header"
       :class="{ 'header--hidden' : isHidden }"
     >
-      <router-link to="/">
+      <router-link
+        to="/"
+        @click.native="reloadIfCurrent('/')"
+      >
         <img 
           :src="$withBase('/images/logo.svg')"
           class="header__logo"
@@ -28,8 +31,10 @@
       <div class="header__nav">
         <nav>
           <router-link
-            v-for="navElement of $themeConfig.nav"
+            v-for="(navElement, index) of $themeConfig.nav"
+            :key="index"
             :to="navElement.link"
+            @click.native="reloadIfCurrent(navElement.link)"
             class="header__link"
           >
             {{ navElement.text }}
@@ -44,7 +49,7 @@
         >
           Login
         </a>
-        <Button link="/contact/">
+        <Button link="/contact/" @click.native="reloadIfCurrent('/contact/')">
           Request a demo
         </Button>
       </div>
@@ -58,7 +63,8 @@
       >
         <div class="container">
           <a 
-            v-for="navLink of $frontmatter.submenuNav"
+            v-for="(navLink, index) of $frontmatter.submenuNav"
+            :key="index"
             :href="navLink.anchor"
             class="submenu__anchor"
             @click="scrollToSection"
@@ -83,6 +89,7 @@ export default {
   }),
   mounted() {
     this.$root.$on('body-scroll', this.toggleVisibility);
+
     // this.getTickerHidden();
   },
   methods: {
@@ -121,6 +128,10 @@ export default {
     },
     toggleOffcanvas() {
       this.$emit('toggle-offcanvas');
+    },
+    reloadIfCurrent(url) {
+      const isCurrent = this.$route.path === url
+      if(isCurrent) this.$router.go(this.$router.currentRoute)
     }
   }
 }

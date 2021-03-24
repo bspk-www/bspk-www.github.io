@@ -51,6 +51,8 @@
   &__image
     img
       min-height 188px
+      width 100%
+      max-width 500px
 
   @media (min-width $MQsm)
     text-align center

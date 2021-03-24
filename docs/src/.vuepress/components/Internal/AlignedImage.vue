@@ -22,11 +22,11 @@
 
   @media (min-width $MQmd)
     img
+      width 100%
       min-height 516px
 
   @media (min-width $MQlg)
     img
-      width 100%
       min-height 688px
 
   @media (min-width $MQxl)

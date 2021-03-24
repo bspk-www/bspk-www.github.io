@@ -124,7 +124,7 @@ export default {
     &__list
       width 100%
       font-weight 300
-      font-size 32px
+      font-size 30px
       line-height 40px
 
       &--mobile
@@ -140,7 +140,7 @@ export default {
   text-align left !important
 
 .vueperslides__arrow
-  top 90%
+  top 130%
 
   &::before
     content ''
@@ -148,7 +148,7 @@ export default {
     height 55px
     position absolute
     left -100%
-    top -25%
+    top -33%
     background $white
     border-radius 50%
     z-index -1
