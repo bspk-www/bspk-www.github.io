@@ -1,10 +1,12 @@
 <template>
-  <section 
+  <section v-if="alignedImage.src"
     data-scroll
     data-scroll-delay="1"
     class="aligned-image container grid-container"
   >
+  
     <img-lazy
+
       :src="$withBase($frontmatter.alignedImage.src)"
       :alt="$frontmatter.alignedImage.alt"
 

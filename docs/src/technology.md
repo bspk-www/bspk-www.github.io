@@ -3,43 +3,41 @@ title: Technology
 permalink: /technology
 intro:
   title: All-in-one solution
-  content: Connected to your existing ecosystem, BSPK is the most user-centric engagement hub created by customers for customers, and engineered for success
+  content: Connected to your existing ecosystem, BSPK is the most user-centric engagement hub created by customers for customers and engineered for success
   id: solution-section
-alignedImage:
-  src: "/images/technology/BSPK_Technology_Main.jpg"
-  alt: "Happy Customers"
+
 features:
-  intro: "Our interactive digital platform offers innovative built-in features for your sales advisors:"
+
   items:
     - icon: "/images/icons/newspaper-light.png"
       title: Interface
       list:
         - Simple, user-friendly, fun
         - Intuitive, visual, responsive
-        - Omni-ready and agile
+        - Unified view of sales opportunities
         - Works globally
     - icon: "/images/icons/chat-circle-text-light.png"
       title: Interactions
       list:
-        - "Multi-channel: SMS, WhatsApp, Apple Messages, Line, Email..."
+        - Apple Messages, WhatsApp, Line, Email, E-commerce chat
         - Rich visual communications via chat & video
         - Authentic control of brand image
     - icon: "/images/icons/rocket-launch-light.png"
       title: Integration
       list:
         - Easy to launch, stand-alone or integrated
-        - APIs to connect to Cegid Y2, Salesforce, Shopify and more
+        - Open APIs connecting to Cegid Y2, Salesforce, Shopify and more
         - Dynamic customer and product search
 counterGallery:
   id: counter-section
-  subtitle: Functionalities
+  subtitle: FEATURES
   sections:
     - title: Customer knowledge
       content: 
         - Purchase history and intent
-        - Imported CRM info
+        - Connected to your CRM
         - Communication preferences
-        - GDPR consent
+        - GDPR privacy consent
         - Notes, Wishlist and much more…
       image:
         src: "/images/technology/counter1.jpg"
@@ -89,7 +87,6 @@ counterGallery:
 ---
 
 <Internal-Intro/>
-<Internal-AlignedImage/>
 <Internal-Features/>
 <Internal-CounterGallery page="technology" :list="true"/>
 <Newsletter/>

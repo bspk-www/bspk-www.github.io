@@ -17,12 +17,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7",
-    "vuepress": "^1.5.3"
+    "vuepress": "^1.8.2"
   },
   "dependencies": {
     "locomotive-scroll": "^4.0.6",
     "vue-carousel": "^0.18.0",
     "vue-cookie-accept-decline": "^5.4.0",
+    "vue-server-renderer": "^2.6.12",
     "vueperslides": "^2.12.1",
     "vuepress-plugin-img-lazy": "^1.0.4",
     "vuepress-plugin-robots": "^1.0.1"

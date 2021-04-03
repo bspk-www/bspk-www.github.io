@@ -15,7 +15,7 @@ submenuNav:
     anchor: "#global-section"
 intro:
   title: Our mission
-  content: To create a better shopping experience for ALL
+  content: To be the platform of choice for consultative sales teams.
   id: mission-section
 alignedImage:
   src: "/images/about/HappyWomenCustomer.jpg"
@@ -73,7 +73,7 @@ counterGallery:
         src: "/images/about/counter2.jpg"
         alt: Payment system
     - title: Customer lifetime value
-      content: We increase customer satisfaction and net promoter scores leading to more sales.
+      content: We increase customer satisfaction and net promoter score leading to more sales.
       image:
         src: "/images/about/counter3.jpg"
         alt: Two women laughing at the meeting

@@ -11,6 +11,7 @@ news:
     date: January 2021
     mobileDate: Jan 2021
     source: AMERICAN MARKETER
+    id: 'american'
     image:
       src: '/images/newsroom/BSPK_Zornitza_Stefanova.jpg'
       alt: Zornitza Stefanova
@@ -19,6 +20,7 @@ news:
     date: January 2021
     mobileDate: Jan 2021
     source: BUSINESS OF FASHION
+    id: 'bof'
     image:
       src: '/images/newsroom/BSPK_Customer_Relationship.jpg'
       alt: Customer getting makeup done
@@ -27,6 +29,7 @@ news:
     date: November 2020
     mobileDate: Nov 2020
     source: Forbes
+    id: 'forbes'
     image:
       src: '/images/newsroom/BSPK_Engaged_Team.jpg'
       alt: Sales Team Engaged With Customers
@@ -43,6 +46,7 @@ news:
     date: November 2020
     mobileDate: Nov 2020
     source: BUSINESS OF FASHION
+    id: 'bof2'
     image:
       src: '/images/newsroom/BSPK_Tech.jpg'
       alt: Video of people
@@ -51,6 +55,7 @@ news:
     date: October 2020
     mobileDate: Oct 2020
     source: L’USINE DIGITALE
+    id: 'lusine'
     image:
       src: '/images/newsroom/BSPK_Chinoise_Smartphone.jpg'
       alt: Chinoise and Smartphone
@@ -59,6 +64,7 @@ news:
     date: October 2020
     mobileDate: Oct 2020
     source: CRUNCHBASE 
+    id: 'crunchbase'
     image:
       src: '/images/newsroom/BSPK_Fundraising.jpg'
       alt: Fundraising
@@ -67,6 +73,7 @@ news:
     date: September 2020
     mobileDate: Sep 2020
     source: LUXURY DAILY
+    id: 'luxury'
     image:
       src: '/images/newsroom/BSPK_Champain.jpg'
       alt: Champain
