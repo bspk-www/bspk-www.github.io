@@ -4,6 +4,7 @@
       v-for="(news,index) of $frontmatter.news"
       class="news grid-container"
       :key="index"
+      :id="news.articleLink"
     >
       <img-lazy
         :src="news.image.src"

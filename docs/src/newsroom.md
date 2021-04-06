@@ -46,7 +46,7 @@ news:
     date: November 2020
     mobileDate: Nov 2020
     source: BUSINESS OF FASHION
-    id: 'bof2'
+    id: 'bofTools'
     image:
       src: '/images/newsroom/BSPK_Tech.jpg'
       alt: Video of people
