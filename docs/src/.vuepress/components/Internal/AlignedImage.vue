@@ -1,5 +1,5 @@
 <template>
-  <section v-if="alignedImage.src"
+  <section 
     data-scroll
     data-scroll-delay="1"
     class="aligned-image container grid-container"
