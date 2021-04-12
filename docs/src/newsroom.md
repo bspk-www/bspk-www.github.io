@@ -38,6 +38,7 @@ news:
     date: November 2020
     mobileDate: Nov 2020
     source: SILICON VALLEY BUSINESS JOURNAL
+    id: siliconValey
     image:
       src: '/images/newsroom/BSPK_Mobile_Shopping.jpg'
       alt: Mobile shopping

@@ -85,5 +85,7 @@ alignedCarousel:
   <Internal-Quotes/>
 </ClientOnly>
 <Internal-CounterGallery page="customers"/>
-<Internal-AlignedCarousel/>
+<ClientOnly>
+  <Internal-AlignedCarousel/>
+</ClientOnly>
 <Newsletter/>

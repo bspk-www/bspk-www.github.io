@@ -14,7 +14,7 @@
         class="testimonials__single"
         :key="i"
       >
-      <a  class="testimonials__link" :href="'/newsroom#' + testimonial.articleLink">
+      <a class="testimonials__link" @click.prevent="goToArticle(testimonial.articleLink)">
         <img :src="$withBase(testimonial.logo)" alt="">
         <p>
           {{ testimonial.text }}
@@ -32,6 +32,14 @@ export default {
   components: {
     Carousel,
     Slide
+  },
+  methods: {
+    goToArticle(anchor) {
+      this.$router.push({
+        path: "/newsroom/",
+        hash: anchor
+      })
+    }
   }
 }
 </script>

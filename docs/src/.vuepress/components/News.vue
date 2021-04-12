@@ -4,7 +4,7 @@
       v-for="(news,index) of $frontmatter.news"
       class="news grid-container"
       :key="index"
-      :id="news.articleLink"
+      :id="news.id"
     >
       <img-lazy
         :src="news.image.src"
@@ -34,6 +34,17 @@
     </article>
   </div>
 </template>
+
+<script>
+export default {
+  mounted() {
+    if (this.$route.hash) {
+      const article = document.querySelector(this.$route.hash);
+      this.$root.$emit('scroll-to-delayed', article);
+    }
+  }
+}
+</script>
 
 <style lang="stylus" scoped>
 .news
