@@ -117,8 +117,10 @@ solutions:
 
 <Homepage-Hero/>
 <ClientOnly>
-  <Homepage-NewsroomDesktop/>
   <Homepage-NewsroomMobile/>
+</ClientOnly>
+<ClientOnly>
+  <Homepage-NewsroomDesktop/>
 </ClientOnly>
 <Homepage-Intro/>
 <Homepage-Solutions/>
