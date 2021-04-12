@@ -98,7 +98,8 @@
             :key="index"
           >
             <strong class="counter-section__copy-title">
-              {{ paragraph.title }}
+              {{ paragraph.title }} 
+
             </strong>
             <ul v-if="paragraph.list">
               <li
@@ -121,8 +122,8 @@
               <li 
                 v-for="(section, index) of section.content"
                 :key="index"
+                v-html="section"
               >
-                {{ section }}
               </li>
             </ul>
           </div>

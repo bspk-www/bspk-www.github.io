@@ -49,7 +49,9 @@ visionSection:
     alt: ""
   title: Our vision
   content:
-    - To be the platform of choice for consultative sales teams. BSPK is a company founded by inspired customers envisioning a better shopping experience. We are evangelists putting the customer at the center of everything we do and giving power to human relationships at the forefront of our clients’ growth strategies.
+    - To be the platform of choice for consultative sales teams. 
+
+    - BSPK is a company founded by inspired customers envisioning a better shopping experience. We are evangelists putting the customer at the center of everything we do and giving power to human relationships at the forefront of our clients’ growth strategies.
 counterGallery:
   id: expertise-section
   title: Our expertise
