@@ -15,7 +15,7 @@ submenuNav:
     anchor: "#global-section"
 intro:
   title: Our mission
-  content: To be the platform of choice for consultative sales teams.
+  content: To create a better shopping experience for ALL.
   id: mission-section
 alignedImage:
   src: "/images/about/HappyWomenCustomer.jpg"
@@ -49,7 +49,8 @@ visionSection:
     alt: ""
   title: Our vision
   content:
-    - BSPK is a company founded by inspired customers envisioning a better shopping experience. We are evangelists putting the customer at the center of everything we do and giving power to human relationships at the forefront of our clients’ growth strategies.
+    - To be the platform of choice for consultative sales teams. <br>
+    BSPK is a company founded by inspired customers envisioning a better shopping experience. We are evangelists putting the customer at the center of everything we do and giving power to human relationships at the forefront of our clients’ growth strategies.
 counterGallery:
   id: expertise-section
   title: Our expertise

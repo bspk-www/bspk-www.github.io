@@ -116,8 +116,8 @@ solutions:
 ---
 
 <Homepage-Hero/>
-<Homepage-NewsroomDesktop/>
 <ClientOnly>
+  <Homepage-NewsroomDesktop/>
   <Homepage-NewsroomMobile/>
 </ClientOnly>
 <Homepage-Intro/>

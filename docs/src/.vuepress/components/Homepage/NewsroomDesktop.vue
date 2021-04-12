@@ -1,7 +1,6 @@
 
 <template>
   <section class="testimonials">
-
     <Carousel
       class="testimonials__wrapper testimonials__wrapper--desktop container"
       :per-page="3"
@@ -15,18 +14,14 @@
         class="testimonials__single"
         :key="i"
       >
-      <a  clss="testimonials__link" :href="'/newsroom#' + testimonial.articleLink">
-
+      <a  class="testimonials__link" :href="'/newsroom#' + testimonial.articleLink">
         <img :src="$withBase(testimonial.logo)" alt="">
         <p>
           {{ testimonial.text }}
-          
         </p>
-              </a>
+      </a>
       </Slide>
     </Carousel>
-
-
   </section>
 </template>
 
@@ -40,6 +35,7 @@ export default {
   }
 }
 </script>
+
 <style lang="stylus" scoped>
 .testimonials
   display none

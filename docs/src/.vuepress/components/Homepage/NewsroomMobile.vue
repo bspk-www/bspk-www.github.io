@@ -13,7 +13,7 @@
         class="testimonials__single"
         :key="i"
       >
-       <a href="https://www.bspk.com/newsroom#{{testimonial.link}}">
+       <a  class="testimonials__link" :href="'/newsroom#' + testimonial.articleLink">
         <img :src="$withBase(testimonial.logo)" alt="">
         <p>
           {{ testimonial.text }}
