@@ -85,6 +85,15 @@ export default {
         offset: -200
       });
     });
+    this.$root.$on('scroll-to-delayed', element => {
+      const instance = this;
+
+      setTimeout(function() {
+        instance.scrollInstance.scrollTo(element, {
+          offset: -200
+        });
+      }, 1000)
+    });
     // this.isTickerVisible = !localStorage.getItem('ticker-hide');
   },
   methods: {

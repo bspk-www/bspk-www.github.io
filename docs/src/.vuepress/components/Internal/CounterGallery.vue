@@ -121,8 +121,8 @@
               <li 
                 v-for="(section, index) of section.content"
                 :key="index"
+                v-html="section"
               >
-                {{ section }}
               </li>
             </ul>
           </div>
