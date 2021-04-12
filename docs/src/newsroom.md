@@ -6,6 +6,24 @@ intro:
   content: 
   id: title-section
 news:
+  - title: Inside the French Fashion-Tech Bubble 
+    link: https://www.voguebusiness.com/technology/inside-the-french-fashion-tech-bubble
+    date: March 2021
+    mobileDate: Mar 2021
+    source: VOGUE BUSINESS
+    id: 'vogue'
+    image:
+      src: '/images/newsroom/BSPK_Vogue.jpg'
+      alt: French bubble
+  - title: The Key to Chinese Luxury Sales in 2021
+    link: https://www.businessoffashion.com/briefings/china/chinese-luxury-shoppers-are-staying-home-again-this-year-how-can-brands-capture-this-demand
+    date: February 2021
+    mobileDate: Feb 2021
+    source: BUSINESS OF FASHION
+    id: 'bofKey'
+    image:
+      src: '/images/newsroom/BSPK_Bof.jpg'
+      alt: Luxury Sales
   - title: "The boss belongs on the shop floor: Lessons for luxury from Elon Musk"
     link: https://www.americanmarketer.com/2021/01/24/the-boss-belongs-on-the-shop-floor-lessons-for-luxury-from-elon-musk/
     date: January 2021
@@ -78,24 +96,6 @@ news:
     image:
       src: '/images/newsroom/BSPK_Champain.jpg'
       alt: Champain
-  - title: The Key to Chinese Luxury Sales in 2021
-    link: https://www.businessoffashion.com/briefings/china/chinese-luxury-shoppers-are-staying-home-again-this-year-how-can-brands-capture-this-demand
-    date: February 2021
-    mobileDate: Feb 2021
-    source: BUSINESS OF FASHION
-    id: 'bofKey'
-    image:
-      src: '/images/newsroom/BSPK_Bof.jpg'
-      alt: Luxury Sales
-  - title: Inside the French Fashion-Tech Bubble 
-    link: https://www.voguebusiness.com/technology/inside-the-french-fashion-tech-bubble
-    date: February 2021
-    mobileDate: Feb 2021
-    source: VOGUE BUSINESS
-    id: 'vogue'
-    image:
-      src: '/images/newsroom/BSPK_Vogue.jpg'
-      alt: French bubble
 ---
 
 <Internal-Intro/>

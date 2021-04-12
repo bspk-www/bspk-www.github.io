@@ -60,7 +60,7 @@ counterGallery:
         alt: Blonde woman talking to the phone
     - title: Customer engagement
       content: 
-        - Adyen payments
+        - Adyen payments <img class="adyen-logo" src="https://www.bspk.com/images/technology/adyen-logo.png" alt="Adyen">
         - Video chat and messaging
         - Apple Messages, SMS, WhatsApp, Line, Email
         - Customized shopping journeys

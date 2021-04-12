@@ -207,6 +207,13 @@ export default {
       margin-top 0
       text-align center
 
+    .counter-section
+      &__copy--list
+        li
+          display flex
+          flex-wrap wrap
+          align-items center
+
     .counter-section__content
       padding 0 30px
 

@@ -38,10 +38,12 @@
 <script>
 export default {
   mounted() {
-    if (this.$route.hash) {
-      const article = document.querySelector(this.$route.hash);
-      this.$root.$emit('scroll-to-delayed', article);
-    }
+    this.$nextTick(function() {
+      if (this.$route.hash) {
+        const article = document.querySelector(this.$route.hash);
+        this.$root.$emit('scroll-to-delayed', article);
+      }
+    })
   }
 }
 </script>
