@@ -20,7 +20,7 @@ news:
     date: January 2021
     mobileDate: Jan 2021
     source: BUSINESS OF FASHION
-    id: 'bof'
+    id: 'bofCustomer'
     image:
       src: '/images/newsroom/BSPK_Customer_Relationship.jpg'
       alt: Customer getting makeup done
@@ -78,6 +78,24 @@ news:
     image:
       src: '/images/newsroom/BSPK_Champain.jpg'
       alt: Champain
+  - title: The Key to Chinese Luxury Sales in 2021
+    link: https://www.businessoffashion.com/briefings/china/chinese-luxury-shoppers-are-staying-home-again-this-year-how-can-brands-capture-this-demand
+    date: February 2021
+    mobileDate: Feb 2021
+    source: BUSINESS OF FASHION
+    id: 'bofKey'
+    image:
+      src: '/images/newsroom/BSPK_Bof.jpg'
+      alt: Luxury Sales
+  - title: Inside the French Fashion-Tech Bubble 
+    link: https://www.voguebusiness.com/technology/inside-the-french-fashion-tech-bubble
+    date: February 2021
+    mobileDate: Feb 2021
+    source: VOGUE BUSINESS
+    id: 'vogue'
+    image:
+      src: '/images/newsroom/BSPK_Vogue.jpg'
+      alt: French bubble
 ---
 
 <Internal-Intro/>
