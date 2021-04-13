@@ -52,7 +52,8 @@ export default {
       margin 10px 0 0
 
     img 
-      height 35px
+      max-height 35px
+      max-width 200px
 
   @media (min-width $MQlg)
     display none

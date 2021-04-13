@@ -35,7 +35,7 @@ testimonials:
     articleLink: "bofKey"
     alt: "BOF"
     text: "The Key to Chinese Luxury Sales in 2021"
-  - logo: "images/SiliconValley.png"
+  - logo: "images/voguebusiness.png"
     articleLink: "vogue"
     alt: "Vouge"
     text: "Inside the French fashion-tech bubble"
